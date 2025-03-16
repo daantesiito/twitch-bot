@@ -40,7 +40,7 @@ class Bot(commands.Bot):
     def __init__(self):
         # El bot se conecta al canal "daantesiito" (tu cuenta principal)
         super().__init__(token=ACCESS_TOKEN, prefix='!', initial_channels=['daantesiito'])
-        self.live_status = {channel: False for channel in TWITCH_CHANNELS + KICK_CHANNELS}
+        self.live_status = {channel: False for channel in TWITCH_CHANNELS}
 
     async def event_ready(self):
         print(f'Conectado como {self.nick}')  # Debería mostrar "danteslto"
